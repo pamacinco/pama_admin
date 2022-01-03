@@ -127,10 +127,10 @@ function MunuAdmin()
 				TriggerEvent('pama_admin:clearchat')
 				
 		elseif data.current.value == "staffrx" then
-			if Config.TrajeRxTr then
+			if Config.traje then
 				trajerx()
 			else
-				ESX.ShowNotification(_U('functionoff'))
+				ESX.ShowNotification('No tienes permiso para ver esto')
 			end	
 			elseif data.current.value == "heal" then
 				TriggerEvent('pama_admin:healPlayer')
@@ -344,7 +344,7 @@ function trajeadmin()
 	TriggerEvent('skinchanger:getSkin', function()
 		local couleur = math.random(0,9)
 		if GetEntityModel(PlayerPedId()) == 1885233650 then
-			TriggerEvent('skinchanger:loadSkin', Config.TrajeAdminRx)
+			TriggerEvent('skinchanger:loadSkin', Config.traje)
 		end
 	end)
 end

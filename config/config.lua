@@ -4,34 +4,14 @@
 
 Config = {}
 
-Config.Locale  = 'es' -- Configuracion de Lenguaje // Language Settings
-
 Config.ESX = 'esx:getSharedObject' -- Tu Trigger ESX // You Trigger ESX
 
 ------- Configuracion Tecla de Apertura -----------
 
-Config.AperturaRx = 121 -- Tecla de apertura // Key Open Menu
 
 Config.Anuncio = true -- Para activar los anuncios
+Config.traje = true -- Para activar el traje de admin
 
-------- Configuracion Permisos // Configuration Permissions -----------
-
-
-Config.RxAdministradores = { --- Configurar Permisos Admin // Config Permission Admin
-    'steam:110000140084c5f', --RxTr
-
-}
-
-Config.RxModeradores = { --- Configurar Permisos Admin // Config Permission Mod
-    -- 'steam:110000115d2d091', --RxTr
-}
-
-------- Configuracion Noclip // Configuration Noclip -----------
-
-Config.SpeedNoclip = 2.01 --- Velocidad Noclip // Noclip speed
-
-
-------- Configuracion de Logs // Logs Configuration -----------
 
 ----- Logs Administrador / Administrator -----
 
@@ -41,7 +21,7 @@ Config.UsoMenuBasico = "" --- Log Al Utilizar alguna Accion Basica (Administrado
 
 --- Traje Administrativo // Costume Administrative ---
 
-Config.TrajeAdminRx = { 
+Config.traje = { 
     ['sex'] = 0, 
 	['bags_1'] = 0, ['bags_2'] = 0,  
 	['tshirt_1'] = 15, ['tshirt_2'] = 2, 
