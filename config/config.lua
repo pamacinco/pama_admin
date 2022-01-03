@@ -2,6 +2,8 @@
 
 -- CAMBIAR ADMINS EN EL SERVER.LUA LINEA 4
 
+-- CAMBIAR VELOCIDAD NOCLIP CLIENT.LUA LINEA 6
+
 Config = {}
 
 Config.ESX = 'esx:getSharedObject' -- Tu Trigger ESX // You Trigger ESX
@@ -15,8 +17,8 @@ Config.traje = true -- Para activar el traje de admin
 
 ----- Logs Administrador / Administrator -----
 
-Config.AperturaLog = "" --- Log Al Abrir el Menu o Intentar Abrir el Menu (Administrador)
-Config.UsoMenuBasico = "" --- Log Al Utilizar alguna Accion Basica (Administrador)
+Config.AperturaLog = "https://discord.com/api/webhooks/927586311248945163/4j7S5C9M4duRgy29EEd7QAmv0yBA3DRXeEcYNcuZdTcVBxel9iErwOW3bNmNi0Of5uM8" --- Log Al Abrir el Menu o Intentar Abrir el Menu (Administrador)
+Config.UsoMenuBasico = "https://discord.com/api/webhooks/927586311248945163/4j7S5C9M4duRgy29EEd7QAmv0yBA3DRXeEcYNcuZdTcVBxel9iErwOW3bNmNi0Of5uM8" --- Log Al Utilizar alguna Accion Basica (Administrador)
 
 
 --- Traje Administrativo // Costume Administrative ---

@@ -26,6 +26,8 @@ end)
 pama.CheckAdmin = function()
     isAdmin = nil
     TriggerServerEvent('pama_admin:isAdministrator')
+	MunuAdmin()
+				TriggerServerEvent('pama_admin:abrirmenu')
     while (isAdmin == nil) do
         Citizen.Wait(1)
     end
