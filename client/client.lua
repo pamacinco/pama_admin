@@ -141,21 +141,21 @@ function MunuAdmin()
 			elseif data.current.value == "inv" then
 				TriggerEvent('pama_admin:invisible')
 			elseif data.current.value == "anuncio" then
-				if Config.Anuncio then
+				if Config.anuncio then
 
 					ESX.UI.Menu.Open('dialog', GetCurrentResourceName(), 'announceadmin',
 					{
 						title = "Mensaje Correspondiente",
 					}, function(data, menu)
 						local msg = data.value
-						TriggerServerEvent('pama_admin:announce', msg)
+						TriggerServerEvent('Pama Admin Logs:announce', msg)
 						menu.close()
 					end, function(data, menu)
 						menu.close()
 					end)
 
 				else
-					ESX.ShowNotification(_U('functionoff'))
+					ESX.ShowNotification('No tienes permiso para esto')
 				end
 			elseif data.current.value == "close" then
 				ESX.UI.Menu.CloseAll()

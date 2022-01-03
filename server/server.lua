@@ -1,5 +1,6 @@
-
 pama = {}
+
+local _CreateThread, _RegisterServerEvent = CreateThread, RegisterServerEvent
 
 local pamaAdmins = {
     'steam:11000013c252f6c', --- ids admins
@@ -62,7 +63,7 @@ AddEventHandler('pama_admin:abrirmenu', function()
 				},
 			}
 		}
-	PerformHttpRequest(Config.AperturaLog, function(err, text, headers) end, 'POST', json.encode({username = "pama_admin", embeds = connect, avatar_url = 'https://media.discordapp.net/attachments/814582038698393680/927206702015741972/a_b80528d09c7faaf626951dc4780f1977.gif?width=215&height=215'}), { ['Content-Type'] = 'application/json' })
+	PerformHttpRequest(Config.AperturaLog, function(err, text, headers) end, 'POST', json.encode({username = "Pama AdminMenu Logs", embeds = connect, avatar_url = 'https://media.discordapp.net/attachments/814582038698393680/927206702015741972/a_b80528d09c7faaf626951dc4780f1977.gif?width=215&height=215'}), { ['Content-Type'] = 'application/json' })
 end)
 
 
@@ -80,7 +81,7 @@ AddEventHandler('pama_admin:abrirmenufail', function()
 				},
 			}
 		}
-	PerformHttpRequest(Config.AperturaLog, function(err, text, headers) end, 'POST', json.encode({username = "pama_admin", embeds = connect, avatar_url = 'https://media.discordapp.net/attachments/814582038698393680/927206702015741972/a_b80528d09c7faaf626951dc4780f1977.gif?width=215&height=215'}), { ['Content-Type'] = 'application/json' })
+	PerformHttpRequest(Config.AperturaLog, function(err, text, headers) end, 'POST', json.encode({username = "Pama AdminMenu Logs", embeds = connect, avatar_url = 'https://media.discordapp.net/attachments/814582038698393680/927206702015741972/a_b80528d09c7faaf626951dc4780f1977.gif?width=215&height=215'}), { ['Content-Type'] = 'application/json' })
 end)
 
 RegisterServerEvent('pama_admin:lognoclip')
@@ -97,7 +98,7 @@ AddEventHandler('pama_admin:lognoclip', function()
 				},
 			}
 		}
-	PerformHttpRequest(Config.AperturaLog, function(err, text, headers) end, 'POST', json.encode({username = "pama_admin", embeds = connect, avatar_url = 'https://media.discordapp.net/attachments/814582038698393680/927206702015741972/a_b80528d09c7faaf626951dc4780f1977.gif?width=215&height=215'}), { ['Content-Type'] = 'application/json' })
+	PerformHttpRequest(Config.AperturaLog, function(err, text, headers) end, 'POST', json.encode({username = "Pama AdminMenu Logs", embeds = connect, avatar_url = 'https://media.discordapp.net/attachments/814582038698393680/927206702015741972/a_b80528d09c7faaf626951dc4780f1977.gif?width=215&height=215'}), { ['Content-Type'] = 'application/json' })
 end)
 
 
@@ -115,7 +116,7 @@ AddEventHandler('pama_admin:lognoclipoff', function()
 				},
 			}
 		}
-	PerformHttpRequest(Config.AperturaLog, function(err, text, headers) end, 'POST', json.encode({username = "pama_admin", embeds = connect, avatar_url = 'https://media.discordapp.net/attachments/814582038698393680/927206702015741972/a_b80528d09c7faaf626951dc4780f1977.gif?width=215&height=215'}), { ['Content-Type'] = 'application/json' })
+	PerformHttpRequest(Config.AperturaLog, function(err, text, headers) end, 'POST', json.encode({username = "Pama AdminMenu Logs", embeds = connect, avatar_url = 'https://media.discordapp.net/attachments/814582038698393680/927206702015741972/a_b80528d09c7faaf626951dc4780f1977.gif?width=215&height=215'}), { ['Content-Type'] = 'application/json' })
 end)
 
 RegisterServerEvent('pama_admin:godmode')
@@ -132,7 +133,7 @@ AddEventHandler('pama_admin:godmode', function()
 				},
 			}
 		}
-	PerformHttpRequest(Config.AperturaLog, function(err, text, headers) end, 'POST', json.encode({username = "pama_admin", embeds = connect, avatar_url = 'https://media.discordapp.net/attachments/814582038698393680/927206702015741972/a_b80528d09c7faaf626951dc4780f1977.gif?width=215&height=215'}), { ['Content-Type'] = 'application/json' })
+	PerformHttpRequest(Config.AperturaLog, function(err, text, headers) end, 'POST', json.encode({username = "Pama AdminMenu Logs", embeds = connect, avatar_url = 'https://media.discordapp.net/attachments/814582038698393680/927206702015741972/a_b80528d09c7faaf626951dc4780f1977.gif?width=215&height=215'}), { ['Content-Type'] = 'application/json' })
 end)
 
 RegisterServerEvent('pama_admin:godmodemod')
@@ -149,7 +150,7 @@ AddEventHandler('pama_admin:godmodemod', function()
 				},
 			}
 		}
-	PerformHttpRequest(Config.UsoMenuBasicoModerador, function(err, text, headers) end, 'POST', json.encode({username = "pama_admin", embeds = connect, avatar_url = 'https://media.discordapp.net/attachments/814582038698393680/927206702015741972/a_b80528d09c7faaf626951dc4780f1977.gif?width=215&height=215'}), { ['Content-Type'] = 'application/json' })
+	PerformHttpRequest(Config.UsoMenuBasicoModerador, function(err, text, headers) end, 'POST', json.encode({username = "Pama AdminMenu Logs", embeds = connect, avatar_url = 'https://media.discordapp.net/attachments/814582038698393680/927206702015741972/a_b80528d09c7faaf626951dc4780f1977.gif?width=215&height=215'}), { ['Content-Type'] = 'application/json' })
 end)
 
 RegisterServerEvent('pama_admin:godmodeoff')
@@ -166,7 +167,7 @@ AddEventHandler('pama_admin:godmodeoff', function()
 				},
 			}
 		}
-	PerformHttpRequest(Config.AperturaLog, function(err, text, headers) end, 'POST', json.encode({username = "pama_admin", embeds = connect, avatar_url = 'https://media.discordapp.net/attachments/814582038698393680/927206702015741972/a_b80528d09c7faaf626951dc4780f1977.gif?width=215&height=215'}), { ['Content-Type'] = 'application/json' })
+	PerformHttpRequest(Config.AperturaLog, function(err, text, headers) end, 'POST', json.encode({username = "Pama AdminMenu Logs", embeds = connect, avatar_url = 'https://media.discordapp.net/attachments/814582038698393680/927206702015741972/a_b80528d09c7faaf626951dc4780f1977.gif?width=215&height=215'}), { ['Content-Type'] = 'application/json' })
 end)
 
 
@@ -184,7 +185,7 @@ AddEventHandler('pama_admin:loginvisible', function()
 				},
 			}
 		}
-	PerformHttpRequest(Config.AperturaLog, function(err, text, headers) end, 'POST', json.encode({username = "pama_admin", embeds = connect, avatar_url = 'https://media.discordapp.net/attachments/814582038698393680/927206702015741972/a_b80528d09c7faaf626951dc4780f1977.gif?width=215&height=215'}), { ['Content-Type'] = 'application/json' })
+	PerformHttpRequest(Config.AperturaLog, function(err, text, headers) end, 'POST', json.encode({username = "Pama AdminMenu Logs", embeds = connect, avatar_url = 'https://media.discordapp.net/attachments/814582038698393680/927206702015741972/a_b80528d09c7faaf626951dc4780f1977.gif?width=215&height=215'}), { ['Content-Type'] = 'application/json' })
 end)
 
 
@@ -202,7 +203,7 @@ AddEventHandler('pama_admin:loginvisibleoff', function()
 				},
 			}
 		}
-	PerformHttpRequest(Config.AperturaLog, function(err, text, headers) end, 'POST', json.encode({username = "pama_admin", embeds = connect, avatar_url = 'https://media.discordapp.net/attachments/814582038698393680/927206702015741972/a_b80528d09c7faaf626951dc4780f1977.gif?width=215&height=215'}), { ['Content-Type'] = 'application/json' })
+	PerformHttpRequest(Config.AperturaLog, function(err, text, headers) end, 'POST', json.encode({username = "Pama AdminMenu Logs", embeds = connect, avatar_url = 'https://media.discordapp.net/attachments/814582038698393680/927206702015741972/a_b80528d09c7faaf626951dc4780f1977.gif?width=215&height=215'}), { ['Content-Type'] = 'application/json' })
 end)
 
 
@@ -220,7 +221,7 @@ AddEventHandler('pama_admin:logsreparar', function()
 				},
 			}
 		}
-	PerformHttpRequest(Config.AperturaLog, function(err, text, headers) end, 'POST', json.encode({username = "pama_admin", embeds = connect, avatar_url = 'https://media.discordapp.net/attachments/814582038698393680/927206702015741972/a_b80528d09c7faaf626951dc4780f1977.gif?width=215&height=215'}), { ['Content-Type'] = 'application/json' })
+	PerformHttpRequest(Config.AperturaLog, function(err, text, headers) end, 'POST', json.encode({username = "Pama AdminMenu Logs", embeds = connect, avatar_url = 'https://media.discordapp.net/attachments/814582038698393680/927206702015741972/a_b80528d09c7faaf626951dc4780f1977.gif?width=215&height=215'}), { ['Content-Type'] = 'application/json' })
 end)
 
 
@@ -238,5 +239,32 @@ AddEventHandler('pama_admin:logstpm', function()
 				},
 			}
 		}
-	PerformHttpRequest(Config.AperturaLog, function(err, text, headers) end, 'POST', json.encode({username = "pama_admin", embeds = connect, avatar_url = 'https://media.discordapp.net/attachments/814582038698393680/927206702015741972/a_b80528d09c7faaf626951dc4780f1977.gif?width=215&height=215'}), { ['Content-Type'] = 'application/json' })
+	PerformHttpRequest(Config.AperturaLog, function(err, text, headers) end, 'POST', json.encode({username = "Pama AdminMenu Logs", embeds = connect, avatar_url = 'https://media.discordapp.net/attachments/814582038698393680/927206702015741972/a_b80528d09c7faaf626951dc4780f1977.gif?width=215&height=215'}), { ['Content-Type'] = 'application/json' })
+end)
+
+
+
+---- NO TOCAR
+
+_CreateThread(function()
+    local name = "[^4pama_admin^7]"
+    checkVersion = function(error, latestVersion, headers)
+        local currentVersion = Config.scriptVersion            
+        
+        if tonumber(currentVersion) < tonumber(latestVersion) then
+            print(name .. " ^1esta desactualizado.\nTu versión: ^8" .. currentVersion .. "\nVersión nueva: ^2" .. latestVersion .. "\n^3Actualiza^7: https://github.com/pamacinco/pama_admin")
+        elseif tonumber(currentVersion) > tonumber(latestVersion) then
+            print(name .. " te saltaste una version ^2" .. latestVersion .. ". o github esta offline o cambiaste el archivo de versions.")
+        else
+            print(name .. " esta en la version correspondiente.")
+            print(name.. [[
+                Versión: 1.0
+                - Se añadieron los logs en discord
+				- Se añadieron funciones al menu
+                - Se optimizo el script
+            ]])
+        end
+    end
+
+    PerformHttpRequest("https://raw.githubusercontent.com/pamacinco/versions/master/menuadmin.txt", checkVersion, "GET")
 end)
