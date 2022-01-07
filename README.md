@@ -1,6 +1,7 @@
 # pama_admin
 Menu de admin multifunciones
 
+[Mi Discord](https://discord.gg/FC6fkmrpuZ)
 
 
 [Preview aqui](https://youtu.be/5_Uxg5ELcOo)
