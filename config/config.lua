@@ -6,7 +6,7 @@
 
 Config = {}
 
-Config.scriptVersion = 1.0 -- No lo toques
+Config.scriptVersion = 1.1 -- No lo toques
 
 Config.ESX = 'esx:getSharedObject' -- Tu Trigger ESX // You Trigger ESX
 

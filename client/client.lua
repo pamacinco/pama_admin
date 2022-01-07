@@ -48,7 +48,7 @@ Citizen.CreateThread(function()
 			ESX.ShowNotification('No tienes permisos para ver esto')
         end 
         if pama_noclip then
-            local ped = GetPlayerPed(-1)
+            local ped = PlayerPedId()
             local x,y,z = getPosition()
             local dx,dy,dz = getCamDirection()
             local speed = pama_noclipSpeed
@@ -89,6 +89,7 @@ function MunuAdmin()
         {label = "Rellenar vida", value = "heal"},
 		{label = "Reparar coche", value = "fix"},
 		{label = "Traje Admin", value = "staffrx"},
+		{label = "Traje Admin", value = "staffrx"},
 		{label = "Invisible",     value = "inv"},
 		{label = "Anuncio Administrativo", value = "anuncio"},
 		{label = "Cerrar",             value = "close"}
@@ -112,7 +113,7 @@ function MunuAdmin()
 				ESX.UI.Menu.CloseAll()
 			elseif data.current.value == "tpoint" then
 				if DoesBlipExist(GetFirstBlipInfoId(8)) then
-					if IsPedSittingInAnyVehicle(GetPlayerPed(-1)) then
+					if IsPedSittingInAnyVehicle(PlayerPedId()) then
 						teleportByCar()
 					else
 						teleportToPoint()
@@ -191,7 +192,7 @@ end
 RegisterNetEvent('pama_admin:nocliped')
 AddEventHandler('pama_admin:nocliped',function()
 	pama_noclip = not pama_noclip
-    local ped = GetPlayerPed(-1)
+    local ped = PlayerPedId()
 
     if pama_noclip then
     	SetEntityInvincible(ped, true)
@@ -211,7 +212,7 @@ end)
 RegisterNetEvent('pama_admin:invisible')
 AddEventHandler('pama_admin:invisible', function()
 	pama_vanish = not pama_vanish
-    local ped = GetPlayerPed(-1)
+    local ped = PlayerPedId()
     SetEntityVisible(ped, not pama_vanish, false)
     if pama_vanish == true then 
         ESX.ShowNotification('Has activado el ~g~invisible.')
@@ -275,12 +276,12 @@ end)
 ]]
 
 getPosition = function()
-	local x,y,z = table.unpack(GetEntityCoords(GetPlayerPed(-1),true))
+	local x,y,z = table.unpack(GetEntityCoords(PlayerPedId(),true))
   	return x,y,z
 end
 
 getCamDirection = function()
-	local heading = GetGameplayCamRelativeHeading()+GetEntityHeading(GetPlayerPed(-1))
+	local heading = GetGameplayCamRelativeHeading()+GetEntityHeading(PlayerPedId())
 	local pitch = GetGameplayCamRelativePitch()
   
 	local x = -math.sin(heading*math.pi/180.0)
@@ -298,18 +299,18 @@ getCamDirection = function()
 end
 
 teleportByCar = function()
-	local player = GetPlayerPed(-1)
+	local player = PlayerPedId()
 	local blip = GetFirstBlipInfoId(8)
-	local coche =  GetVehiclePedIsIn(GetPlayerPed(-1),false)
+	local coche =  GetVehiclePedIsIn(PlayerPedId(),false)
 		local coord = Citizen.InvokeNative(0xFA7C7F0AADF25D09, blip, Citizen.ResultAsVector())
 		SetEntityCoords(coche,coord.x,coord.y,coord.z+5)
 		TriggerEvent('esx:showNotification', "Te has teletransportado ~g~correctamente.")
-		SetPedIntoVehicle(GetPlayerPed(-1), coche, - 1)
+		SetPedIntoVehicle(PlayerPedId(), coche, - 1)
 		DrawNotification(false, true)
 end
 
 teleportToPoint = function()
-    local player = GetPlayerPed(-1)
+    local player = PlayerPedId()
 	local blip = GetFirstBlipInfoId(8)
 	local coord = Citizen.InvokeNative(0xFA7C7F0AADF25D09, blip, Citizen.ResultAsVector())
 	SetEntityCoords(player,coord.x,coord.y,coord.z)
@@ -324,7 +325,7 @@ end
 function trajerx() 
     Neo = not Neo
 	if not Neo then  
-		local model = GetEntityModel(GetPlayerPed(-1))
+		local model = GetEntityModel(PlayerPedId())
 
 		if model == GetHashKey("mp_m_freemode_01") then
 			trajeadmin() end
