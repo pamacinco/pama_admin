@@ -98,9 +98,7 @@ _CreateThread(function()
         else
             print(name .. " esta en la version correspondiente.")
             print(name.. [[
-                Versión: 1.0
-                - Se añadieron los logs en discord
-				- Se añadieron funciones al menu
+                Versión: 1.1
                 - Se optimizo el script
             ]])
         end
