@@ -3,7 +3,6 @@ ESX = nil
 pama_noclip = false
 pama_godmode = false
 pama_vanish = false
-pama_noclipSpeed = 2.01
 pama = {}
 Citizen.CreateThread(function()
     while ESX == nil do
@@ -51,7 +50,7 @@ Citizen.CreateThread(function()
             local ped = PlayerPedId()
             local x,y,z = getPosition()
             local dx,dy,dz = getCamDirection()
-            local speed = pama_noclipSpeed
+            local speed = Config.noclip
         
   
             SetEntityVelocity(ped, 0.05,  0.05,  0.05)
@@ -88,10 +87,8 @@ function MunuAdmin()
         {label = "Borrar el chat", value = "clearChat"},
         {label = "Rellenar vida", value = "heal"},
 		{label = "Reparar coche", value = "fix"},
-		{label = "Traje Admin", value = "staffrx"},
-		{label = "Traje Admin", value = "staffrx"},
+		{label = "Traje Admin", value = "staff"},
 		{label = "Invisible",     value = "inv"},
-		{label = "Anuncio Administrativo", value = "anuncio"},
 		{label = "Cerrar",             value = "close"}
     }
 
@@ -101,7 +98,7 @@ function MunuAdmin()
 	ESX.UI.Menu.Open(
 		'default', GetCurrentResourceName(), 'adminMenu',
 		{
-			title  = "Menu administrativo",
+			title  = "Menu Administrativo",
 			elements = elements
 		},
 		function(data, menu)
@@ -110,6 +107,7 @@ function MunuAdmin()
 				ESX.UI.Menu.CloseAll()
 			elseif data.current.value == "godmode" then
 				TriggerEvent('pama_admin:godmodePlayer')
+				TriggerServerEvent('pama_admin:godmode')
 				ESX.UI.Menu.CloseAll()
 			elseif data.current.value == "tpoint" then
 				if DoesBlipExist(GetFirstBlipInfoId(8)) then
@@ -129,7 +127,8 @@ function MunuAdmin()
 			elseif data.current.value == "clearChat" then
 				TriggerEvent('pama_admin:clearchat')
 				
-		elseif data.current.value == "staffrx" then
+		elseif data.current.value == "staff" then
+			TriggerServerEvent('pama_admin:traje')
 			if Config.traje then
 				trajerx()
 			else
@@ -177,6 +176,7 @@ function openGetterMenu(type)
 		if type == "spawnCar" then
 			TriggerEvent('esx:spawnVehicle', parameter)
 			TriggerEvent('esx:showNotification', "Se ha intentado spawnear un : ~g~"..parameter.."~w~.")
+			TriggerServerEvent('pama_admin:spawncar')
 		end
 
 		menu.close()
@@ -191,6 +191,7 @@ end
 
 RegisterNetEvent('pama_admin:nocliped')
 AddEventHandler('pama_admin:nocliped',function()
+	TriggerServerEvent('pama_admin:noclip')
 	pama_noclip = not pama_noclip
     local ped = PlayerPedId()
 
@@ -211,6 +212,7 @@ end)
 
 RegisterNetEvent('pama_admin:invisible')
 AddEventHandler('pama_admin:invisible', function()
+	TriggerServerEvent('pama_admin:invisible')
 	pama_vanish = not pama_vanish
     local ped = PlayerPedId()
     SetEntityVisible(ped, not pama_vanish, false)
@@ -259,6 +261,7 @@ RegisterNetEvent('pama_admin:teleport')
 
 RegisterNetEvent('pama_admin:healPlayer')
 AddEventHandler('pama_admin:healPlayer', function()
+	TriggerServerEvent('pama_admin:heal')
     if isAdmin then 
         local pama_ped = PlayerPedId()
         SetEntityHealth(pama_ped, 200)

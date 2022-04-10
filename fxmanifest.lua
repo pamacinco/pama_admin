@@ -1,3 +1,7 @@
+author "pamacinco#0659"
+
+description "https://discord.gg/FC6fkmrpuZ"
+
 fx_version 'adamant'
 
 game 'gta5'

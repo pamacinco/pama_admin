@@ -2,11 +2,12 @@
 
 -- CAMBIAR ADMINS EN EL SERVER.LUA LINEA 4
 
--- CAMBIAR VELOCIDAD NOCLIP CLIENT.LUA LINEA 6
 
 Config = {}
 
-Config.scriptVersion = 1.1 -- No lo toques
+Config.noclip = 2.01 -- Velocidad Noclip
+
+Config.scriptVersion = 1.2 -- No lo toques
 
 Config.ESX = 'esx:getSharedObject' -- Tu Trigger ESX // You Trigger ESX
 
@@ -19,8 +20,7 @@ Config.traje = true -- Para activar el traje de admin
 
 ----- Logs Administrador / Administrator -----
 
-Config.AperturaLog = "" --- Log Al Abrir el Menu o Intentar Abrir el Menu (Administrador)
-Config.UsoMenuBasico = "" --- Log Al Utilizar alguna Accion Basica (Administrador)
+Config.PamaLogs = "" --- Log al hacer acciones con el menu
 
 
 --- Traje Administrativo // Costume Administrative ---
