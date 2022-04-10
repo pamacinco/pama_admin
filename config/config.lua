@@ -11,19 +11,19 @@ Config.scriptVersion = 1.2 -- No lo toques
 
 Config.ESX = 'esx:getSharedObject' -- Tu Trigger ESX // You Trigger ESX
 
-------- Configuracion Tecla de Apertura -----------
+------- Activar/Desactivar Funciones -----------
 
 
 Config.anuncio = true -- Para activar los anuncios
 Config.traje = true -- Para activar el traje de admin
 
 
------ Logs Administrador / Administrator -----
+----- Logs Administrador-----
 
 Config.PamaLogs = "" --- Log al hacer acciones con el menu
 
 
---- Traje Administrativo // Costume Administrative ---
+--- Traje Administrativo ---
 
 Config.traje = { 
     ['sex'] = 0, 
